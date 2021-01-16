@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Uncharted remastered",
+    "price": 4299,
+    "description": "Adventure game",
+    "currency": "INR",
+    "developers": [
+      {
+        "name": "Naughty Dog",
+        "country": "US",
+        "website": "https://www.naughtydog.com/",
+        "details": "Naughty dog is the creator of crash bandicoot and the uncharted series"
+      }
+    ]
+  },
+  {
+    "name": "The Last of us",
+    "price": 3999,
+    "description": "A game about how a virus takes over humanity",
+    "currency": "INR",
+    "developers": [
+      {
+        "name": "Naughty Dog",
+        "country": "US",
+        "website": "https://www.naughtydog.com/",
+        "details": "Naughty dog is the creator of crash bandicoot and the uncharted series"
+      }
+    ]
+  },
+  {
+    "name": "Horizon Zero Dawn",
+    "price": 3499,
+    "description": "Best sci fi game ever",
+    "currency": "INR",
+    "developers": [
+      {
+        "name": "Guerilla Games",
+        "country": "US",
+        "website": "https://www.guerrilla-games.com/",
+        "details": "Great development team, generally make games for Playstation"
+      }
+    ]
+  }
+]
