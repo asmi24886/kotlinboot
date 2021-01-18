@@ -10,16 +10,21 @@ API
 URL - http://localhost:8080/api
 
 Methods:-
+
 GET - /test - Test api to check if service is up
+
 GET - /allgames - Gets all available games in DB
+
 GET - /allgames/price/asc | /allgames/price/desc - Gets all games by sorting by price ascending or descending
+
 POST - /savegame - Saves a single video game data
+
 DELETE - /deleteall - Deletes all data from DB
 
 POST - /initdata - Hydrates the db with demo data
 
 
-Sample data in resources/testdata.json.
+**Sample data in resources/testdata.json.**
 
 Sample data for save one game operation
 ----------------------------------------------
