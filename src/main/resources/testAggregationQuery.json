@@ -1,0 +1,3 @@
+{
+  "aggregationQuery" : "[{\"$match\":{\"$and\":[{\"developers.country\":\"US\"},{\"$expr\":{\"$lt\":[\"$price\",4399]}}]}},{\"$group\":{\"_id\":{\"devname\":\"$developers.name\"},\"averagePrice\":{\"$avg\":\"$price\"}}},{\"$project\":{\"_id\":0,\"developer\":{\"$arrayElemAt\":[\"$_id.devname\",0]},\"averagePrice\":1}}]"
+}

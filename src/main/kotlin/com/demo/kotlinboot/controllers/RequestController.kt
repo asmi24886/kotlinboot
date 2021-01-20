@@ -22,6 +22,9 @@ class RequestController(val videoGamesService: VideoGamesService) {
     @GetMapping("/allgames/price/{sortType}")
     fun getAllSortByPriceAsc(@PathVariable sortType : String)   = if(sortType=="asc")videoGamesService.getAllSortByPriceAsc() else videoGamesService.getAllSortByPriceDesc()
 
+    @GetMapping("/avgprice")
+    fun getVideoGamesAveragePricesByDev()                       = videoGamesService.getVideoGameAveragePricesByDev()
+
     @PostMapping("/savegame")
     fun saveOneVideoGame(@RequestBody videoGames: VideoGames)   = videoGamesService.saveOneVideoGame(videoGames)
 
