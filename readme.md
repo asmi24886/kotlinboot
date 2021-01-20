@@ -18,6 +18,8 @@ GET - /allgames - Gets all available games in DB
 
 GET - /allgames/price/asc | /allgames/price/desc - Gets all games by sorting by price ascending or descending
 
+GET - /avgprice - Gets average game prices grouped by developer names
+
 POST - /savegame - Saves a single video game data
 
 DELETE - /deleteall - Deletes all data from DB
