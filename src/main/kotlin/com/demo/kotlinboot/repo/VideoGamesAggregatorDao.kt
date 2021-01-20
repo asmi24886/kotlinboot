@@ -14,6 +14,66 @@ class VideoGamesAggregatorDao(val mongoTemplate: MongoTemplate) {
     @Value("\${mongodb.collection.name}")
     private lateinit var collectionName:String
 
+    /*
+        The query -
+
+         [
+          {
+            "$match": {
+              "$and": [
+                {
+                  "developers.country": "US"
+                },
+                {
+                  "$expr": {
+                    "$lt": [
+                      "$price",
+                      4399
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "$group": {
+              "_id": "$developers.name",
+              "averagePrice": {
+                "$avg": "$price"
+              }
+            }
+          },
+          {
+            "$project": {
+              "_id": 0,
+              "developer": {
+                "$arrayElemAt": [
+                  "$_id",
+                  0
+                ]
+              },
+              "averagePrice": 1
+            }
+          }
+        ]
+     */
+
+    /*
+        The result should be -
+        [
+            /* 1 */
+            {
+                "averagePrice" : 4149.0,
+                "developer" : "Naughty Dog"
+            },
+
+            /* 2 */
+            {
+                "averagePrice" : 3499.0,
+                "developer" : "Guerilla Games"
+            }
+        ]
+     */
     fun getAverageGamePricesGroupByDev() : List<DeveloperGamePriceData>? {
 
         val matchOperation      = Aggregation.match(
