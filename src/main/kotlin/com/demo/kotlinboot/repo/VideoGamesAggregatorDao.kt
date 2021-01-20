@@ -28,7 +28,7 @@ class VideoGamesAggregatorDao(val mongoTemplate: MongoTemplate) {
                   "$expr": {
                     "$lt": [
                       "$price",
-                      4399
+                      5000
                     ]
                   }
                 }
